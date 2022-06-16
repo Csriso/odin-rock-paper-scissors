@@ -1,0 +1,42 @@
+body {
+  background-color: rgb(68, 44, 44);
+  color: white;
+}
+.container,
+.player,
+.computer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  padding: 50px 50px;
+}
+.score,
+.buttons,
+.actualround {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+}
+button {
+  background-color: rgb(47, 21, 109);
+  padding: 20px 50px;
+  margin: 0px 5px;
+  font-size: 30px;
+}
+
+#playerSelection,
+#computerSelection {
+  font-size: 30px;
+}
+.five-games {
+  margin-top: 50px;
+}
+.five-games button {
+  color: white;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock, paper, scissors</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Rock, paper scissors</h1>
+      <div class="result">Play a round to show the result</div>
+      <div class="actualround">
+        <div class="player">
+          <p>Player</p>
+          <span id="playerSelection">🎯</span>
+        </div>
+        <div class="computer">
+          <p>Computer</p>
+          <span id="computerSelection">🎯</span>
+        </div>
+      </div>
+      <div class="score">
+        <div class="player">
+          <p>Player</p>
+          <span id="playerScore">0</span>
+        </div>
+        <div class="computer">
+          <p>Computer</p>
+          <span id="computerScore">0</span>
+        </div>
+      </div>
+      <div class="buttons">
+        <button id="rockBtn">🗿</button>
+        <button id="paperBtn">🧻</button>
+        <button id="scissorsBtn">✂️</button>
+      </div>
+      <div class="buttons five-games">
+        <button id="fiveGames">Play five games</button>
+      </div>
+    </div>
+    <script src="./game.js"></script>
+  </body>
+</html>
