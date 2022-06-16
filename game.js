@@ -57,7 +57,12 @@ function playGame(playerSelection, computerSelection) {
 
 function game() {
     for (let i = 0; i < 5; i++) {
-        let input = prompt(`Player selection round ${i + 1}`).trim();
+        let input = prompt(`Player selection round ${i + 1} ("rock", "paper" or "scissors")`).trim();
+        let correctInputs = ["rock", "paper", "scissors"];
+        while (!correctInputs.includes(input)) {
+            alert(`Incorrect input, introduce "rock", "paper" or "scissors"`);
+            input = prompt(`Player selection round ${i + 1} ("rock", "paper" or "scissors")`).trim();
+        }
         playGame(input, computerPlay());
     }
 }
