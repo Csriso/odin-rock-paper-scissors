@@ -56,6 +56,9 @@ function playGame(playerSelection, computerSelection) {
 }
 
 function game() {
+    let computerwins = 0;
+    let playerwins = 0;
+    let draws = 0;
     for (let i = 0; i < 5; i++) {
         let input = prompt(`Player selection round ${i + 1} ("rock", "paper" or "scissors")`).trim();
         let correctInputs = ["rock", "paper", "scissors"];
@@ -63,8 +66,17 @@ function game() {
             alert(`Incorrect input, introduce "rock", "paper" or "scissors"`);
             input = prompt(`Player selection round ${i + 1} ("rock", "paper" or "scissors")`).trim();
         }
-        playGame(input, computerPlay());
+        const result = playGame(input, computerPlay());
+        if (result.includes("Win")) {
+            playerwins++;
+        } else if (result.includes("Lose")) {
+            computerwins++;
+        } else {
+            draws++;
+        }
     }
+    resultSelector.innerHTML = `Computer wins : ${computerwins}, player wins : ${playerwins}, draws : ${draws}`;
+
 }
 
 let resultSelector = document.querySelector(".result");
